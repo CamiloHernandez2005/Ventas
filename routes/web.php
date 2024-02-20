@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/productos', Productos::class);
-    Route::get('/ventas', Ventas::class);-
+    Route::get('/ventas', Ventas::class);
     Route::get('/dashboard', function(){
         return view('dashboard');
     })->name('dashboard');
